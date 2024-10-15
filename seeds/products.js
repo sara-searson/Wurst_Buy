@@ -5,12 +5,12 @@ const { Brand, Product } = require('../models')
 db.on('error', console.error.bind(console, 'MongoDB connection error:'))
 
 const main = async () => {
-    const apple = await Product.find({ brand_name: 'Apple' })
-    const dell = await Habitat.find({ brand_name: 'Dell' })
-    const lenovo = await Habitat.find({ brand_name: 'Lenovo' })
-    const hp = await Habitat.find({ brand_name: 'HP' })
+    const apple = await Brand.find({ brand_name: 'Apple' })
+    const dell = await Brand.find({ brand_name: 'Dell' })
+    const lenovo = await Brand.find({ brand_name: 'Lenovo' })
+    const hp = await Brand.find({ brand_name: 'HP' })
 
-    const animals = [
+    const products = [
         //apple computers
         {
             brand: apple._id, 
@@ -102,8 +102,8 @@ const main = async () => {
     ]
 
 
-    await Animal.insertMany(animals)
-    console.log('Created animals in habitats!')
+    await Product.insertMany(products)
+    console.log('Added products')
    }
    
    
@@ -111,3 +111,5 @@ const main = async () => {
     await main()
     db.close()
    }
+
+   run()
