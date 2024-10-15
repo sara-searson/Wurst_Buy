@@ -24,7 +24,7 @@ const getProductById = async (req, res) => {
 
 const createProduct = async (req, res) => {
   try {
-    const plant = await new Product(req.body);
+    const product = await new Product(req.body);
     await product.save();
     return res.status(201).json({ product });
   } catch (e) {
