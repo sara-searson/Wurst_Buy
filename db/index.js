@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 
 mongoose
-  .connect("mongodb://127.0.0.1:27017/plantsDatabase") //Alter this with Atlas link from Michael
+  .connect("mongodb+srv://michaeltibbetts1:56BRK05HiuK6j8MO@student-cluster.t8y9r.mongodb.net/wurstBuyDatabase?retryWrites=true&w=majority&appName=student-cluster") //Alter this with Atlas link from Michael
   .then(() => {
     console.log("Successfully connected to MongoDB.");
   })

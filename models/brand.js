@@ -1,5 +1,5 @@
-const { Brand } = require('mongoose')
-
+const mongoose = require('mongoose')
+const { Schema } = require('mongoose')
 
 const BrandSchema = new Schema(
  {
