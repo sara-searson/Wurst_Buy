@@ -1,0 +1,28 @@
+.logo{
+    display:flex;
+    width: 100%;
+    justify-content: center;
+}
+
+#logo {
+    display: flex;
+    width: 150px;
+
+}
+.topnav {
+    display:flex;
+    justify-content: space-around;
+    padding: 10px
+}
+
+.searchbar {
+    display:flex;
+    justify-content: center;
+
+}
+
+.mainContainer {
+    display:grid;
+    width: 100%;
+    
+}
