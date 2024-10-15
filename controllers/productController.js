@@ -1,4 +1,6 @@
-// const Product = require("../models/product");
+
+const Product = require("../models");
+
 
 // const getAllProducts = async (req, res) => {
 //   try {
@@ -22,15 +24,17 @@
 //   }
 // };
 
-// const createProduct = async (req, res) => {
-//   try {
-//     const plant = await new Product(req.body);
-//     await product.save();
-//     return res.status(201).json({ product });
-//   } catch (e) {
-//     return res.status(500).json({ error: error.message });
-//   }
-// };
+
+const createProduct = async (req, res) => {
+  try {
+    const product = await new Product(req.body);
+    await product.save();
+    return res.status(201).json({ product });
+  } catch (e) {
+    return res.status(500).json({ error: error.message });
+  }
+};
+
 
 // const updateProduct = async (req, res) => {
 //   try {
