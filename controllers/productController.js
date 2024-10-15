@@ -1,6 +1,6 @@
+const { Product } = require("../models");
 
 const Product = require("../models");
-
 
 // const getAllProducts = async (req, res) => {
 //   try {
@@ -24,7 +24,6 @@ const Product = require("../models");
 //   }
 // };
 
-
 const createProduct = async (req, res) => {
   try {
     const product = await new Product(req.body);
@@ -34,7 +33,6 @@ const createProduct = async (req, res) => {
     return res.status(500).json({ error: error.message });
   }
 };
-
 
 // const updateProduct = async (req, res) => {
 //   try {
