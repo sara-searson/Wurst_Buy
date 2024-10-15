@@ -13,10 +13,10 @@ const ProductSchema = new Schema(
         gpu: { type: String, required: true },
         motherboard: { type: String, required: true },
         cpu: { type: String, required: true },
-        cpu: { type: String, required: true },
         color: { type: String, required: true },
         preowned: { type: Boolean, required: true },
-        product_image: { type: String, required: true}
+        product_image: { type: String, required: true},
+        is_laptop: { type: Boolean, required: true }
     }
 )
 
