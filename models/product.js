@@ -1,4 +1,5 @@
-const { Product } = require('mongoose')
+const mongoose = require('mongoose')
+const { Schema } = require('mongoose')
 
 const ProductSchema = new Schema(
     {
