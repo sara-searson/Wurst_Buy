@@ -13,25 +13,34 @@
         <img id="logo" src="/logo.jpg">
     </div>
     <div class="topnav">
-        <a class="active" href="About">About</a>
+        <a class="about" href="About">About</a>
         <a class="products" href="Products">Products</a>
     </div>
     <div class="searchbar">
         <input type="text" placeholder="Search">
-        <button>Go!</button>
+        <button id="goButton">Go!</button>
     </div>
 </header>
 
 <body>
-<div class="mainContainer">
-    <div class="topLeftContainer"></div>
-    <div class="topRightContainer"></div>
-    <div class="bottomLeftContainer"></div>
-    <div class="bottomRightContainer"></div>
-</div>
+    <div class="mainContainer">
+        <div class="searchResults">
+            <ul id="resultsList">
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
+        <div class="topLeftContainer"></div>
+        <div class="topRightContainer"></div>
+        <div class="bottomLeftContainer"></div>
+        <div class="bottomRightContainer"></div>
+    </div>
 
 </body>
 
-<footer>Hours | Contact Us</footer>
+<footer class="footer">
+    <a class="hours" href="Hours">Hours</a> <a class="contactUs" href="Contact Us">Contact Us</a>
+</footer>
 
 </html>

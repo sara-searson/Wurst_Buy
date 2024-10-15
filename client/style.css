@@ -26,3 +26,12 @@
     width: 100%;
     
 }
+
+.footer {
+    display:flex;
+    justify-content: space-around;
+
+}
+#resultsList{
+    list-style: none;
+}
