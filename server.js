@@ -14,10 +14,13 @@ app.listen(PORT, () => console.log(`Listening on port: ${PORT}`));
 
 app.get(`/`, (req, res) => res.send(`This is our landing page!`));
 
-// app.get(`/plants`, plantController.getAllPlants);
-// app.get(`/plants/:id`, plantController.getPlantById);
-// app.post(`/plants`, plantController.createPlant);
-// app.put("/plants/:id", plantController.updatePlant);
-// app.delete("/plants/:id", plantController.deletePlant);
+app.get(`/brands`, brandController.getAllBrands);
+app.get(`/brands/:id`, brandController.getBrandById);
+app.post(`/brands`, brandController.createBrand);
+app.put(`/brands/:id`, brandController.updateBrand);
 
-//Edit these based on controllers.
+app.get(`/products`, productController.getAllProducts);
+app.get(`/products/:id`, productController.getProductById);
+app.post(`/products`, productController.createProduct);
+app.put("/products/:id", productController.updateProduct);
+app.delete("/products/:id", productController.deleteProduct);
