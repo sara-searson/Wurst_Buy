@@ -29,6 +29,9 @@
                     <button id="goButton">Go!</button>
                 </div>
             </li>
+            <li>
+                <button id="filterButton">Filter By:</button>
+            </li>
         </ul>
     </div>
     </div>
@@ -38,6 +41,64 @@
 
 <body>
     <div class="mainContainer">
+        <div id="filterOptions" class="filterContainer"> <!--Got this from ChatGPT-Mike D-->
+            <h3>Filter Options</h3>
+        
+            <!-- Brand Filters -->
+            <div class="filterGroup">
+                <h4>Brand</h4>
+                <input type="checkbox" class="brand" value="Brand A"> Brand A<br>
+                <input type="checkbox" class="brand" value="Brand B"> Brand B<br>
+                <input type="checkbox" class="brand" value="Brand C"> Brand C<br>
+            </div>
+        
+            <!-- Price Filters -->
+            <div class="filterGroup">
+                <h4>Price</h4>
+                <input type="radio" name="price" value="0-250"> $0 - $250<br>
+                <input type="radio" name="price" value="250-500"> $250 - $500<br>
+                <input type="radio" name="price" value="500-1000"> $500 - $1000<br>
+            </div>
+        
+            <!-- Storage Filters -->
+            <div class="filterGroup">
+                <h4>Storage (GB)</h4>
+                <input type="radio" name="storage" value="0-128"> 0GB - 128GB<br>
+                <input type="radio" name="storage" value="128-512"> 128GB - 512GB<br>
+                <input type="radio" name="storage" value="512-1024"> 512GB - 1TB<br>
+            </div>
+        
+            <!-- RAM Filters -->
+            <div class="filterGroup">
+                <h4>RAM (GB)</h4>
+                <input type="radio" name="ram" value="4-8"> 4GB - 8GB<br>
+                <input type="radio" name="ram" value="8-16"> 8GB - 16GB<br>
+                <input type="radio" name="ram" value="16-32"> 16GB - 32GB<br>
+            </div>
+        
+            <!-- Color Filters -->
+            <div class="filterGroup">
+                <h4>Color</h4>
+                <input type="checkbox" class="color" value="Black"> Black<br>
+                <input type="checkbox" class="color" value="White"> White<br>
+                <input type="checkbox" class="color" value="Silver"> Silver<br>
+            </div>
+        
+            <!-- Preowned Filters -->
+            <div class="filterGroup">
+                <h4>Preowned</h4>
+                <input type="checkbox" class="preowned" value="true"> Preowned<br>
+            </div>
+        
+            <!-- Desktop/Laptop Filters -->
+            <div class="filterGroup">
+                <h4>Desktop/Laptop</h4>
+                <input type="checkbox" class="is_laptop" value="true"> Laptop<br>
+                <input type="checkbox" class="is_laptop" value="false"> Desktop<br>
+            </div>
+        
+            <button id="applyFilters">Apply Filters</button>
+        </div> <!--Got this from ChatGPT-Mike D (from start of the div w/ "filterOptions" as an id)-->
         <div class="searchResults">
             <ul id="resultsList">
                 <li></li>
