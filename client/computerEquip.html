@@ -4,7 +4,7 @@
 <head>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <link rel="stylesheet" href="style.css">
-    <script defer src="./script.js"></script>
+    <script defer src="./computerEquip.js"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wurst Buy</title>
@@ -15,10 +15,14 @@
     </div>
     <div class="topnav">
         <ul class="topnav">
-            <li><a class="about" href="about.html">About</a></li>
+          <li><a class="home" href="index.html">Home</a>
+        </li>
+            <li>
+                <a class="navList" id="about" href="about.html">About</a>
+            </li>
             <div class="prodDropdown">
                 <li>
-                    <a class="products" href="javascript:void(0)">Products</a>
+                    <a class="navList" id="products" href="javascript:void(0)">Products</a>
                     <div class="dropdown-content">
                         <ul>
                             <li><a href="computerEquip.html">Computer Equipment</a></li>
@@ -40,26 +44,7 @@
 </header>
 
 <body>
-    <div class="mainContainer">
-        <div class="searchResults">
-            <ul id="resultsList">
-                <li></li>
-                <li></li>
-                <li></li>
-            </ul>
-        </div>
-        <div class="imageContainer">
-            <img src="" class="topLeftContainer"></img>
-            <img src="" class="topRightContainer"></img>
-            <img src="" class="bottomLeftContainer"></img>
-            <img src="" class="bottomRightContainer"></img>
-        </div>
-    </div>
-
+    <h1>Computer Equipment</h1>
 </body>
-
-<footer class="footer">
-    <a class="hours" href="Hours">Hours</a> <a class="contactUs" href="Contact Us">Contact Us</a>
-</footer>
 
 </html>
