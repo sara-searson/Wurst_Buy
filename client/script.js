@@ -31,6 +31,7 @@ searchBar.addEventListener("input", () => {
 
 //populating the webpages
 
+
 const imageGrid = document.querySelector("imageGrid");
 const BASE_URL = "localhost:3001";
 
@@ -42,6 +43,7 @@ const getImage = async (brand, position) => {
   console.log(position)
   position.setAttribute ("src", image);
 };
+
 
 const populatePage = () => {
   getImage('Dell', topLeftContainer);
