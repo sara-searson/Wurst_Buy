@@ -2,6 +2,10 @@
 
 const searchButton = document.getElementById("goButton");
 const about = document.getElementsByClassName("about");
+const topLeftContainer = document.querySelector(".topLeftContainer")
+const topRightContainer = document.querySelector(".topRightContainer")
+const bottomLeftContainer = document.querySelector(".bottomLeftContainer")
+const bottomRightContainer = document.querySelector(".bottomRightContainer")
 
 function goButton() {
   console.log("button clicked");
@@ -31,17 +35,22 @@ const imageGrid = document.querySelector("imageGrid");
 const BASE_URL = "localhost:3001";
 
 const getImage = async (brand, position) => {
-  let response = await axios.get(`http://localhost:3001/brands/name${brand}`);
+  let response = await axios.get(`http://localhost:3001/brands/name/${brand}`);
+  console.log(response)
   let image = response.data.logo_url;
-  position.setAttribute("src", image);
+  console.log(image)
+  console.log(position)
+  position.setAttribute ("src", image);
 };
 
 const populatePage = () => {
-  getImage(dell, topLeftContainer);
-  getImage(apple, topRightContainer);
-  getImage(hp, bottomLeftContainer);
-  getImage(lenovo, bottomRightContainer);
+  getImage('Dell', topLeftContainer);
+  getImage('Apple', topRightContainer);
+  getImage('HP', bottomLeftContainer);
+  getImage('Lenovo', bottomRightContainer);
 };
+
+populatePage()
 
 //Filter fucntionality--Got this through ChatGPT
 document.addEventListener("DOMContentLoaded", () => {
