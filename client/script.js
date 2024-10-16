@@ -29,12 +29,14 @@ filteredItems.forEach(item => resultsList.appendChild(item))
 
 //populating the webpages
 
-const imageGrid = document.querySelector('imageGrid')
+
+
+
 const BASE_URL = 'localhost:3001'
 
 const getImage = async (brand, position) => {
     let response = await axios.get(`http://localhost:3001/brands/name${brand}`)
-    let image = brand.data.logo_url
+    let image = response.data.logo_url
     position.setAttribute('src', image)
 }
 
