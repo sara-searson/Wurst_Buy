@@ -9,7 +9,7 @@ const ProductSchema = new Schema({
   year_released: { type: Number, required: true },
   price: { type: Number, required: true, min: 0 },
   storage_GB: { type: Number, required: true },
-  ram: { type: Number, required: true },
+  ram_GB: { type: Number, required: true },
   gpu: { type: String, required: true },
   motherboard: { type: String, required: true },
   cpu: { type: String, required: true },
