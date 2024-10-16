@@ -14,13 +14,26 @@
         <img id="logo" src="/logo.jpg">
     </div>
     <div class="topnav">
-        <a class="products" href="productpage.html">Products</a>
-        <a class="about" href="About">About</a>
+        <ul class="topnav">
+            <li><a class="about" href="about.html">About</a></li>
+            <li>
+                <div class="prodDropdown">
+                    <a class="products" href="javascript:void(0)">Products</a>
+                    <div class="dropdown-content">
+                        <a href="#">Computer Equipment</a>
+                        <a href="#">Sausages</a>
+            </li>
+            <li>
+                <div class="searchbar">
+                    <input type="text" placeholder="Search">
+                    <button id="goButton">Go!</button>
+                </div>
+            </li>
+        </ul>
     </div>
-    <div class="searchbar">
-        <input type="text" placeholder="Search">
-        <button id="goButton">Go!</button>
     </div>
+    </div>
+
 </header>
 
 <body>
