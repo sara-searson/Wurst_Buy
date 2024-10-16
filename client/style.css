@@ -1,43 +1,44 @@
-.logo{
-    display:flex;
-    width: 100%;
-    justify-content: center;
+.logo {
+  display: flex;
+  width: 100%;
+  justify-content: center;
 }
 
 #logo {
-    display: flex;
-    width: 150px;
-
+  display: flex;
+  width: 150px;
 }
 .topnav {
-    display:flex;
-    flex-direction: row;
-    justify-content: space-around;
-    padding: 10px;
-    list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 10px;
+  list-style-type: none;
 }
 li a {
-    display: flex;
-    justify-content: space-around;
+  display: flex;
+  justify-content: space-around;
 }
 
 .searchbar {
-    display:flex;
-    justify-content: center;
-
+  display: flex;
+  justify-content: center;
 }
 
 .mainContainer {
-    display:grid;
-    width: 100%;
-    
+  display: grid;
+  width: 100%;
 }
 
 .footer {
-    display:flex;
-    justify-content: space-around;
-
+  display: flex;
+  justify-content: space-around;
 }
-#resultsList{
-    list-style: none;
+#resultsList {
+  list-style: none;
+}
+
+#filterOptions {
+  /*Got this from ChatGPT. It hides the filter options, which will only be displayed by the click event-Mike D*/
+  display: none;
 }
