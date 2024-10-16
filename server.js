@@ -4,6 +4,7 @@ const bodyParser = require("body-parser");
 const logger = require("morgan");
 const brandController = require("./controllers/brandController");
 const productController = require("./controllers/productController");
+const sausageController = require("./controllers/sausageController");
 const PORT = process.env.PORT || 3001;
 
 const app = express();
@@ -18,9 +19,16 @@ app.get("/brands", brandController.getAllBrands);
 app.get("/brands/:id", brandController.getBrandById);
 app.post("/brands", brandController.createBrand);
 app.put("/brands/:id", brandController.updateBrand);
+app.get("/brands/name/:name", brandController.getByName)
 
 app.get("/products", productController.getAllProducts);
 app.get("/products/:id", productController.getProductById);
 app.post("/products", productController.createProduct);
 app.put("/products/:id", productController.updateProduct);
 app.delete("/products/:id", productController.deleteProduct);
+
+app.get("/sausages", sausageController.getAllSausages);
+app.get("/sausages/:id", sausageController.getSausageById);
+app.post("/sausages", sausageController.createSausage);
+app.put("/sausages/:id", sausageController.updateSausage);
+app.get("/sausages/name/:name", sausageController.getByName)

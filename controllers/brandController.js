@@ -37,7 +37,7 @@ const updateBrand = async (req, res) => {
     let { id } = req.params;
     let brand = await Brand.findByIdAndUpdate(id, req.body, { new: true });
     if (brand) {
-      return res.status(200).json(plant);
+      return res.status(200).json(brand);
     }
     throw new Error("brand not found");
   } catch (e) {
@@ -45,9 +45,23 @@ const updateBrand = async (req, res) => {
   }
 };
 
+const getByName = async (req, res) => {
+  try {
+    const { name } = req.params;
+    const brand = await Brand.findOne({ brand_name: name });
+    if (brand) {
+      return res.json(brand);
+    }
+    return res.status(404).send(`Brand with name '${name}' not found. Check your capitalization.`);
+  } catch (e) {
+    return res.status(500).send(e.message);
+  }
+}
+
 module.exports = {
   getAllBrands,
   getBrandById,
   createBrand,
   updateBrand,
+  getByName
 };
