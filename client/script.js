@@ -43,6 +43,7 @@ const getImage = async (brand, position) => {
   console.log(image)
   console.log(position)
   position.setAttribute ("src", image);
+  console.log(response.data.brand_name)
   position.setAttribute('id', response.data.brand_name)
 };
 
@@ -56,11 +57,12 @@ const populatePage = () => {
 
 populatePage ()
 
-logos.forEach((func) => {
-  func.addEventListener('click', () => {
+logos.forEach((logo) => {
+  logo.addEventListener('click', () => {
     console.log('clicked')
-      const brand = logos.getAttribute('id')
-      window.location.href = `/productpage.html?brand=${encodeURIComponent(brand)}`//https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/encodeURIComponent
+      const brand = logo.getAttribute('id')
+      console.log(brand)
+      window.location.href = `/productpage.html#brand=${encodeURIComponent(brand)}`//https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/encodeURIComponent
   })
 })
 
