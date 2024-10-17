@@ -68,7 +68,9 @@ console.log(sausages)
 
 function createCards(sausages) {
     sausages.forEach(sausage => {
-       let div = sausageSection.appendChild(document.createElement("div")) //each time it iterates through arrray it will append a div to the sausage element
+       let div = sausageSection.appendChild(document.createElement("div"))
+            div.classList.add("sausageContainer")
+       //each time it iterates through arrray it will append a div to the sausage element
         let image = div.appendChild(document.createElement("img"))//creates image elements in HMTL
        
         let text = div.appendChild(document.createElement("p"))//creates paragraph elements in HTML
@@ -81,7 +83,7 @@ function createCards(sausages) {
        
         let price_single = div.appendChild(document.createElement("p"))
             
-            price_single.textContent = "Single: $" && sausage.price_single
+            price_single.innerHTML = "Single: $" && sausage.price_single
             price_single.classList.add("sausageText")
         
         let price_package = div.appendChild(document.createElement("p"))    
