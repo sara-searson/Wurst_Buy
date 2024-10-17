@@ -157,3 +157,28 @@ li a {
 #logo {
   width: 250px;
 }
+
+.prodCont {
+  display: flex;
+  justify-content: center;
+}
+
+.prodCont2 {
+  display: flex;
+  justify-content: center;
+  flex-direction: row-reverse
+}
+
+.productImg {
+  width: 20rem
+}
+
+#prod1Text {
+  width: fit-content
+}
+
+#brands {
+  display: flex;
+  justify-content: space-between;
+  background: rgb(84, 84, 199);
+}
