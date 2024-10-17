@@ -10,17 +10,19 @@
 }
 .topnav {
 
+
+
   width: 100%;
+
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   padding: 10px;
   list-style-type: none;
-
 }
 .navList {
-    display:flex;
-    justify-content: space-around;
+  display: flex;
+  justify-content: space-around;
 }
 
 li a {
@@ -29,25 +31,24 @@ li a {
 }
 
 .prodDropdown:hover {
-    background-color: red;
+  background-color: red;
 }
 
-.dropdown-content{
-    display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    z-index: 1;
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  z-index: 1;
 }
 
-.dropdown-content:hover{
-    background-color: #f1f1f1;
-    list-style-type: none;
+.dropdown-content:hover {
+  background-color: #f1f1f1;
+  list-style-type: none;
 }
-.prodDropdown:hover .dropdown-content{
-    display:block;
-    list-style-type: none;
+.prodDropdown:hover .dropdown-content {
+  display: block;
+  list-style-type: none;
 }
-
 
 .searchbar {
   display: flex;
@@ -67,10 +68,6 @@ li a {
   list-style: none;
 }
 
-#filterOptions {
-  /*Got this from ChatGPT. It hides the filter options, which will only be displayed by the click event-Mike D*/
-  display: none;
-}
 
 .sausage {
   width: 40%;
@@ -78,3 +75,4 @@ li a {
   padding: 5px;
   border-radius: 20px;
 }
+

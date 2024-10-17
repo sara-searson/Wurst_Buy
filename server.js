@@ -1,6 +1,6 @@
 const express = require("express");
 const db = require("./db");
-const cors = require('cors')
+const cors = require("cors");
 const bodyParser = require("body-parser");
 const logger = require("morgan");
 const brandController = require("./controllers/brandController");
@@ -11,9 +11,8 @@ const PORT = process.env.PORT || 3001;
 const app = express();
 app.use(logger("dev"));
 app.use(bodyParser.json());
-app.use(cors())
-app.use(express.json())
-
+app.use(cors());
+app.use(express.json());
 
 app.listen(PORT, () => console.log(`Listening on port: ${PORT}`));
 
@@ -23,7 +22,7 @@ app.get("/brands", brandController.getAllBrands);
 app.get("/brands/:id", brandController.getBrandById);
 app.post("/brands", brandController.createBrand);
 app.put("/brands/:id", brandController.updateBrand);
-app.get("/brands/name/:name", brandController.getByName)
+app.get("/brands/name/:name", brandController.getByName);
 
 app.get("/products", productController.getAllProducts);
 app.get("/products/:id", productController.getProductById);
@@ -35,4 +34,18 @@ app.get("/sausages", sausageController.getAllSausages);
 app.get("/sausages/:id", sausageController.getSausageById);
 app.post("/sausages", sausageController.createSausage);
 app.put("/sausages/:id", sausageController.updateSausage);
-app.get("/sausages/name/:name", sausageController.getByName)
+app.get("/sausages/name/:name", sausageController.getByName);
+
+// import React from "react"; //Got this from ChatGPT-Mike D
+// import ProductFilter from "./components/ProductFilter";
+
+// const App = () => {
+//   return (
+//     <div>
+//       <h1>Product List</h1>
+//       <ProductFilter />
+//     </div>
+//   );
+// };
+
+// export default App;
