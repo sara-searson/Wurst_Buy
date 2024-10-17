@@ -3,6 +3,7 @@ const about = document.getElementsByClassName("about")
 const hash = window.location.hash.substring(1); // Remove the '#' character
 const params = new URLSearchParams(hash);
 const brand = params.get('brand');
+console.log(brand)
 
 function goButton(){
     console.log("button clicked");
@@ -37,7 +38,7 @@ filteredItems.forEach(item => resultsList.appendChild(item))
 })
 
 const getInfo = async (num, position, imgPosition) => {
-    let response = await axios.get(`http://localhost:3001/products/brand/apple`);
+    let response = await axios.get(`http://localhost:3001/products/brand/${brand}`);
     console.log(response)
     let computer = response.data[num]
     let image = computer.product_image;
