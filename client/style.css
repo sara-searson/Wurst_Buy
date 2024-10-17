@@ -166,7 +166,8 @@ li a {
 .prodCont2 {
   display: flex;
   justify-content: center;
-  flex-direction: row-reverse
+  flex-direction: row-reverse;
+  width: 50rem
 }
 
 .productImg {
@@ -174,7 +175,23 @@ li a {
 }
 
 #prod1Text {
-  width: fit-content
+  width: fit-content;
+  background: rgba(0,0,0, .25)
+}
+
+#prod2Text {
+  width: fit-content;
+  background: rgba(0,0,0, .25)
+}
+
+#prod3Text {
+  width: fit-content;
+  background: rgba(0,0,0, .25)
+}
+
+#prod4Text {
+  width: fit-content;
+  background: rgba(0,0,0, .25)
 }
 
 #brands {
