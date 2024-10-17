@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 const { Schema } = require("mongoose");
 
 const ProductSchema = new Schema({
-  brand: { type: Schema.Types.ObjectId, ref: "BrandSchema" },
+  brand: { type: String, required: true },
   product_model: { type: String, required: true },
   SKU: { type: Number, required: true },
   product_name: { type: String, required: true },
