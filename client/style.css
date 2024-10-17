@@ -110,3 +110,8 @@ li a {
   padding: 10px;
 
 }
+.imageContainer {
+  display: flex;
+  justify-content: space-around;
+  padding: 10px;
+}
