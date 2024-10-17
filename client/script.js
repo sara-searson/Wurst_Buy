@@ -6,6 +6,7 @@ const topLeftContainer = document.querySelector(".topLeftContainer")
 const topRightContainer = document.querySelector(".topRightContainer")
 const bottomLeftContainer = document.querySelector(".bottomLeftContainer")
 const bottomRightContainer = document.querySelector(".bottomRightContainer")
+const logos = document.querySelectorAll('.logos')
 
 function goButton() {
   console.log("button clicked");
@@ -42,6 +43,7 @@ const getImage = async (brand, position) => {
   console.log(image)
   console.log(position)
   position.setAttribute ("src", image);
+  position.setAttribute('id', response.data.brand_name)
 };
 
 
@@ -53,6 +55,15 @@ const populatePage = () => {
 };
 
 populatePage ()
+
+logos.forEach((func) => {
+  func.addEventListener('click', () => {
+    console.log('clicked')
+      const brand = logos.getAttribute('id')
+      window.location.href = `/productpage.html?brand=${encodeURIComponent(brand)}`//https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/encodeURIComponent
+  })
+})
+
 
 //Filter fucntionality--Got this through ChatGPT-MD
 // document.addEventListener("DOMContentLoaded", () => {

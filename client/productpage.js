@@ -1,6 +1,8 @@
 const searchButton = document.getElementById("goButton")
 const about = document.getElementsByClassName("about")
-
+const hash = window.location.hash.substring(1); // Remove the '#' character
+const params = new URLSearchParams(hash);
+const brand = params.get('brand');
 
 function goButton(){
     console.log("button clicked");
