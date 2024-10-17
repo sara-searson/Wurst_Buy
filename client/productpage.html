@@ -14,23 +14,35 @@
         <img id="logo" src="/logo.jpg">
     </div>
     <div class="topnav">
-        <a class="Home" href="index.html">Home</a>
-        <a class="about" href="About">About</a>
-        <a class="filter" href="Filter">Filter</a>
+        <ul class="topnav">
+            <li><a class="home" href="index.html">Home</a>
+            </li>
+            <li><a class="about" href="about.html">About</a></li>
+            <div class="prodDropdown">
+                <li>
+                    <a class="products" href="javascript:void(0)">Products</a>
+                    <div class="dropdown-content">
+                       <ul>
+                        <li><a href="productpage.html">Computer Equipment</a></li>
+                        <li><a href="sausage.html">Sausages</a></li>
+                    </ul> 
+                </li>
+            </div>
+            <li>
+                <div class="searchbar">
+                    <input type="text" placeholder="Search">
+                    <button id="goButton">Go!</button>
+                </div>
+            </li>
+        </ul>
     </div>
-    <div class="searchbar">
-        <input type="text" placeholder="Search">
-        <button id="goButton">Go!</button>
     </div>
+    </div>
+
 </header>
 
 <body>
-    <div id="productContainer1"></div>
-    <div id="productContainer2"></div>
-    <div id="productContainer3"></div>
-    <div id="productContainer4"></div>
-    <div id="productContainer5"></div>
-    <div id="productContainer6"></div>
+    <section id="computer-container"></section>
 
 
 </body>
