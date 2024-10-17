@@ -2,16 +2,19 @@
   display: flex;
   width: 100%;
   justify-content: center;
+  background: yellow; /*Determine background color w/ group*/
 }
 
 #logo {
   display: flex;
   width: 150px;
 }
+
+body {
+  background: rgb(84, 84, 199); /*Determine background color w/ group*/
+}
+
 .topnav {
-
-
-
   width: 100%;
 
   display: flex;
@@ -63,11 +66,11 @@ li a {
 .footer {
   display: flex;
   justify-content: space-around;
+  position: relative;
 }
 #resultsList {
   list-style: none;
 }
-
 
 .sausage {
   width: 40%;
@@ -79,7 +82,7 @@ li a {
 
 .sausageContainer {
   width: 100%;
-  display:flex;
+  display: flex;
   flex-direction: row;
 }
 
@@ -91,7 +94,6 @@ li a {
 .computer-container {
   width: 100%;
   display: flex;
-
 }
 
 .computerContainer {
@@ -103,10 +105,8 @@ li a {
 
 .computers {
   width: 500px;
-  
 }
 .computerText {
   display: absolute;
   padding: 10px;
-
 }
