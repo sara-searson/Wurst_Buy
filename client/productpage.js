@@ -8,6 +8,15 @@ function goButton(){
 
 searchButton.addEventListener("click", goButton)
 
+const product1 = document.querySelector('#product1')
+const productContainer1 = document.querySelector('#productContainer1')
+const product2 = document.querySelector('#product2')
+const productContainer2 = document.querySelector('#productContainer2')
+const product3 = document.querySelector('#product3')
+const productContainer3 = document.querySelector('#productContainer3')
+const product4 = document.querySelector('#product4')
+const productContainer4 = document.querySelector('#productContainer4')
+
 
 //search bar functionality
 
@@ -25,62 +34,48 @@ resultsList.innerHTML = ''
 filteredItems.forEach(item => resultsList.appendChild(item))
 })
 
-const computerSection = document.querySelector("#computer-container")
+const getInfo = async (num, position, imgPosition) => {
+    let response = await axios.get(`http://localhost:3001/products/brand/apple`);
+    console.log(response)
+    let computer = response.data[num]
+    let image = computer.product_image;
+    console.log(image)
+    console.log(imgPosition)
+    imgPosition.setAttribute ("src", image);
 
-let computers = [] //pull the data in as an array so we can iterate below
-const getAllComputers = async () =>{
-    let response = await axios.get(`http://localhost:3001/products`)
-computers = response.data //defines sausages as response.data
-console.log(computers)
-}
+    if (computer.is_laptop === true) {
+        let desc = position.appendChild(document.createElement("p"))  
+        desc.textContent = `Laptop`
+        desc.classList.add("computerText")
+    } else {
+        let desc = position.appendChild(document.createElement("p"))  
+        desc.textContent = `Desktop`
+        desc.classList.add("computerText")
+    }
 
+    let storage = position.appendChild(document.createElement("p"))  
+    storage.textContent = `Storage: ${computer.storage_GB}GB`
+    storage.classList.add("computerText")
 
+    let ram = position.appendChild(document.createElement("p"))  
+    ram.textContent = `RAM: ${computer.ram_GB}GB`
+    ram.classList.add("computerText")
 
-function createCards(computers) {
-    computers.forEach(computer => {
-       let div = computerSection.appendChild(document.createElement("div"))
-            div.classList.add("computerContainer")
-       //each time it iterates through arrray it will append a div to the sausage element
-        let image = div.appendChild(document.createElement("img"))//creates image elements in HMTL
-       
-        let text = div.appendChild(document.createElement("p"))//creates paragraph elements in HTML
-           
-            image.src = computer.product_image
-            text.textContent = computer.product_name //since we defined sausages=response.data above, all we need is sausage
-           
-            image.classList.add("computers")
-            text.classList.add("computerText")
-       
+    let cpu = position.appendChild(document.createElement("p"))  
+    cpu.textContent = `CPU: ${computer.cpu}`
+    cpu.classList.add("computerText")
 
-            let model = div.appendChild(document.createElement("p"))
-            model.textContent = computer.product_model
-            model.classList.add("computerText")
-
-        let price = div.appendChild(document.createElement("p"))
-            
-            price.textContent = computer.price
-            price.classList.add("computerText")
-        
-        
-        
-      
-
-        let preowned = div.appendChild(document.createElement("p"))
-            if (computer.preowned === true){
-                preowned.textContent = "pre-owned"
-            }
-            preowned.classList.add("computerText")
-            preowned.id = "preowned" //adds the spicy ID
-       
-         let color = div.appendChild(document.createElement("p"))
-            color.textContent = computer.color
-            color.classList.add("computerText")
-        })
-
-  }  
-
- async function main(){
-   await getAllComputers()
-    createCards(computers)
-  }
-  main()
+    let gpu = position.appendChild(document.createElement("p"))  
+    gpu.textContent = `Graphics: ${computer.gpu}`
+    gpu.classList.add("computerText")
+  };
+  
+  
+  const populatePage = () => {
+    getInfo('0', productContainer1, product1);
+    getInfo('1', productContainer2, product2);
+    getInfo('2', productContainer3, product3);
+    getInfo('3', productContainer4, product4);
+  };
+  
+  populatePage ()

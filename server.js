@@ -6,6 +6,7 @@ const logger = require("morgan");
 const brandController = require("./controllers/brandController");
 const productController = require("./controllers/productController");
 const sausageController = require("./controllers/sausageController");
+const reviewController = require("./controllers/reviewController")
 const PORT = process.env.PORT || 3001;
 
 const app = express();
@@ -29,12 +30,18 @@ app.get("/products/:id", productController.getProductById);
 app.post("/products", productController.createProduct);
 app.put("/products/:id", productController.updateProduct);
 app.delete("/products/:id", productController.deleteProduct);
+app.get("/products/brand/:brandName", productController.getByBrand)
 
 app.get("/sausages", sausageController.getAllSausages);
 app.get("/sausages/:id", sausageController.getSausageById);
 app.post("/sausages", sausageController.createSausage);
 app.put("/sausages/:id", sausageController.updateSausage);
 app.get("/sausages/name/:name", sausageController.getByName);
+
+app.get("/reviews", reviewController.getAllReviews);
+app.get("/reviews/:id", reviewController.getReviewById);
+app.post("/reviews", reviewController.createReview);
+app.get("/reviews/sausage/:sausageName", reviewController.getReviewBySausage)
 
 // import React from "react"; //Got this from ChatGPT-Mike D
 // import ProductFilter from "./components/ProductFilter";

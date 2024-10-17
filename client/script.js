@@ -52,6 +52,7 @@ const populatePage = () => {
   getImage('Lenovo', bottomRightContainer);
 };
 
+populatePage ()
 
 //Filter fucntionality--Got this through ChatGPT-MD
 // document.addEventListener("DOMContentLoaded", () => {

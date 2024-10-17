@@ -58,10 +58,26 @@ const deleteProduct = async (req, res) => {
   }
 };
 
+const getByBrand = async (req, res) => {
+  try {
+    const { brandName } = req.params;
+    console.log(brandName)
+    const computer = await Product.find({ brand: brandName });
+    console.log(computer)
+    if (computer) {
+      return res.json(computer);
+    }
+    return res.status(404).send(`looks like we don't have any ${brandName} computers in stock right now!`);
+  } catch (e) {
+    return res.status(500).send(e.message);
+  }
+}
+
 module.exports = {
   getAllProducts,
   getProductById,
   createProduct,
   updateProduct,
   deleteProduct,
+  getByBrand
 };
