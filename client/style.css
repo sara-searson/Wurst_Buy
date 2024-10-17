@@ -8,18 +8,25 @@
 .logos {
   display: flex;
   width: 150px;
+  height: auto;
+}
+
+html, body { /*from chatGPT*/
+  height: 100%;
+  margin: 0
 }
 
 body {
-  font-family: noto sans;
-  height: 100%;
-  margin: 0;
+display: flex;
+flex-direction: column;
+background: rgb(139, 207, 2);
+font-family: Noto Sans;
 }
 
 header {
   display: flex;
   flex-direction: column;
-  background: yellow;
+  background: rgb(22, 35, 168);
   width: 100%;
   margin: 0;
 }
@@ -53,12 +60,18 @@ li a {
 .dropdown-content {
   display: none;
   position: absolute;
-  background-color: #f9f9f9;
+  background-color: rgb(200, 200, 200);
   z-index: 1;
+    list-style-type: none;
+  text-decoration: none;
+}
+
+.dropdown-content li {
+    list-style-type: none;
 }
 
 .dropdown-content:hover {
-  background-color: #f1f1f1;
+  background-color: rgb(200, 200, 200);
   list-style-type: none;
 }
 .prodDropdown:hover .dropdown-content {
@@ -74,15 +87,24 @@ li a {
 .mainContainer {
   display: grid;
   width: 100%;
-  background: rgb(84, 84, 199); /*Determine background color w/ group*/
+  background: rgb(139, 207, 2); /*Determine background color w/ group*/
 }
 
 .footer {
   display: flex;
   justify-content: space-around;
-  position: relative;
-  background: rgb(84, 84, 199); /*Determine background color w/ group*/
+  position: absolute;
+  margin-top: 800px;
+  width: 100%;
+  padding: 10px;
+  flex-shrink: 0;
 }
+
+.hours, .contactUs {
+  color: white;
+  text-decoration: none;
+}
+
 
 #resultsList {
   list-style: none;
