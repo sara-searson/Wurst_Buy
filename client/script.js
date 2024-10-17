@@ -43,54 +43,54 @@ const populatePage = () => {
   getImage(lenovo, bottomRightContainer);
 };
 
-//Filter fucntionality--Got this through ChatGPT
-document.addEventListener("DOMContentLoaded", () => {
-  //Not sure what DOMContentLoaded does, though if I had to guess I would imagine it's just the eventlistener when the page loads?-MD
-  const filterButton = document.getElementById("filterButton");
-  const applyFiltersButton = document.getElementById("applyFilters");
+//Filter fucntionality--Got this through ChatGPT-MD
+// document.addEventListener("DOMContentLoaded", () => {
+//   //Not sure what DOMContentLoaded does, though if I had to guess I would imagine it's just the eventlistener when the page loads?-MD
+//   const filterButton = document.getElementById("filterButton");
+//   const applyFiltersButton = document.getElementById("applyFilters");
 
-  // Toggle the visibility of the filter options
-  filterButton.addEventListener("click", () => {
-    const filterContainer = document.getElementById("filterOptions");
-    filterContainer.style.display =
-      filterContainer.style.display === "block" ? "none" : "block"; //NOT SURE WHAT THIS DOES-MD
-  });
+//   // Toggle the visibility of the filter options
+//   filterButton.addEventListener("click", () => {
+//     const filterContainer = document.getElementById("filterOptions");
+//     filterContainer.style.display =
+//       filterContainer.style.display === "block" ? "none" : "block";
+//   });
 
-  // Apply the filters
-  applyFiltersButton.addEventListener("click", () => {
-    // Collect selected filters
-    const selectedBrands = Array.from(
-      //This data will work if I input it manually, but would love to try to figure out if there's away to do it in fewer lines of code that pulls from the database.-MD
-      document.querySelectorAll(".brand:checked")
-    ).map((el) => el.value); //NOT SURE WHAT "EL" DOES AND DOESN'T SEEM TO BE DEFINED-MD
-    const selectedPrice = document.querySelector(
-      'input[name="price"]:checked'
-    )?.value;
-    const selectedStorage = document.querySelector(
-      'input[name="storage"]:checked'
-    )?.value;
-    const selectedRam = document.querySelector(
-      'input[name="ram"]:checked'
-    )?.value;
-    const selectedColors = Array.from(
-      document.querySelectorAll(".color:checked")
-    ).map((el) => el.value);
-    const selectedPreowned = document.querySelector(".preowned:checked")?.value;
-    const selectedIsLaptop =
-      document.querySelector(".is_laptop:checked")?.value;
+// Apply the filters
+//   applyFiltersButton.addEventListener("click", () => {
+//     // Collect selected filters
+//     const selectedBrands = Array.from(
+//       //This data will work if I input it manually, but would love to try to figure out if there's away to do it in fewer lines of code that pulls from the database.-MD
+//       document.querySelectorAll(".brand:checked")
+//     ).map((el) => el.value); //NOT SURE WHAT "EL" DOES AND DOESN'T SEEM TO BE DEFINED-MD
+//     const selectedPrice = document.querySelector(
+//       'input[name="price"]:checked'
+//     )?.value;
+//     const selectedStorage = document.querySelector(
+//       'input[name="storage"]:checked'
+//     )?.value;
+//     const selectedRam = document.querySelector(
+//       'input[name="ram"]:checked'
+//     )?.value;
+//     const selectedColors = Array.from(
+//       document.querySelectorAll(".color:checked")
+//     ).map((el) => el.value);
+//     const selectedPreowned = document.querySelector(".preowned:checked")?.value;
+//     const selectedIsLaptop =
+//       document.querySelector(".is_laptop:checked")?.value;
 
-    // Build filter object-ALSO WONDERIN IF IT WOULD MAKE SENSE TO INCORPORATE THE DB HERE-MD
-    const filters = {
-      brand: selectedBrands,
-      price: selectedPrice,
-      storage: selectedStorage,
-      ram: selectedRam,
-      color: selectedColors,
-      preowned: selectedPreowned,
-      is_laptop: selectedIsLaptop,
-    };
+//     // Build filter object-ALSO WONDERIN IF IT WOULD MAKE SENSE TO INCORPORATE THE DB HERE-MD
+//     const filters = {
+//       brand: selectedBrands,
+//       price: selectedPrice,
+//       storage: selectedStorage,
+//       ram: selectedRam,
+//       color: selectedColors,
+//       preowned: selectedPreowned,
+//       is_laptop: selectedIsLaptop,
+//     };
 
-    // Use this filter object to call your API or filter the list
-    console.log("Filters applied:", filters);
-  });
-});
+//     // Use this filter object to call your API or filter the list
+//     console.log("Filters applied:", filters);
+//   });
+// });
