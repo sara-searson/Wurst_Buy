@@ -81,7 +81,7 @@ const getInfo = async (brand, num, position, imgPosition) => {
     imgPosition.setAttribute ("src", image);
 
     let desc = position.children[0]  
-    computer.is_laptop === true ? desc.textContent = 'Laptop' : desc.textContent = 'Desktop'
+    computer.is_laptop === true ? desc.textContent = `Laptop: ${computer.product_name}` : desc.textContent = `Desktop: ${computer.product_name}`
 
     let storage = position.children[1]
     storage.textContent = `Storage: ${computer.storage_GB}`
