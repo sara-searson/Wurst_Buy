@@ -1,18 +1,27 @@
 .logo {
   display: flex;
-  width: 100%;
   justify-content: center;
-  background: yellow; /*Determine background color w/ group*/
+  width: 100%;
+  /*background: yellow; Determine background color w/ group*/
 }
 
-#logo {
+.logos {
   display: flex;
   width: 150px;
 }
 
 body {
-  background: rgb(84, 84, 199); /*Determine background color w/ group*/
-  font-family: ;
+  font-family: noto sans;
+  height: 100%;
+  margin: 0;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  background: yellow;
+  width: 100%;
+  margin: 0;
 }
 
 .topnav {
@@ -22,7 +31,6 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  padding: 10px;
   list-style-type: none;
   text-decoration: none;
 }
@@ -66,12 +74,14 @@ li a {
 .mainContainer {
   display: grid;
   width: 100%;
+  background: rgb(84, 84, 199); /*Determine background color w/ group*/
 }
 
 .footer {
   display: flex;
   justify-content: space-around;
   position: relative;
+  background: rgb(84, 84, 199); /*Determine background color w/ group*/
 }
 
 #resultsList {
@@ -120,4 +130,8 @@ li a {
   display: flex;
   justify-content: space-around;
   padding: 10px;
+}
+
+#logo {
+  width: 250px;
 }
