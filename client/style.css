@@ -12,16 +12,19 @@
 
 body {
   background: rgb(84, 84, 199); /*Determine background color w/ group*/
+  font-family: ;
 }
 
 .topnav {
   width: 100%;
-
+  background: black;
+  color: white;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   padding: 10px;
   list-style-type: none;
+  text-decoration: none;
 }
 .navList {
   display: flex;
@@ -31,6 +34,8 @@ body {
 li a {
   display: flex;
   justify-content: space-around;
+  text-decoration: none;
+  color: white;
 }
 
 .prodDropdown:hover {
@@ -68,6 +73,7 @@ li a {
   justify-content: space-around;
   position: relative;
 }
+
 #resultsList {
   list-style: none;
 }
