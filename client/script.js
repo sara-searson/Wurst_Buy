@@ -59,8 +59,8 @@ populatePage ()
 logos.forEach((func) => {
   func.addEventListener('click', () => {
     console.log('clicked')
-      const brand = logos.getAttribute('id')
-      window.location.href = `/productpage.html?brand=${encodeURIComponent(brand)}`//https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/encodeURIComponent
+      const brandName = func.getAttribute('id').toLocaleLowerCase()
+      window.location.href = `/client/productpage.html#brand=${encodeURIComponent(brandName)}`//https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/encodeURIComponent
   })
 })
 
